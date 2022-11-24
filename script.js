@@ -19,6 +19,21 @@ window.addEventListener('load', function(){
                     this.game.debug = !this.game.debug;
                 }
             });
+            window.addEventListener('click', e=>{
+                if(e.target.id=='arribaButton'){
+
+                }
+                else if(e.target.id=='abajoButton'){
+                    this.game.player.shootTop();
+
+                }
+                else if(e.target.id=='disparoButton'){
+                    this.game.player.shootTop();
+                   // console.log('disparo');
+
+                }
+              //  console.log(e.target);
+            });
             window.addEventListener('keyup', e =>{
                 if (this.game.keys.indexOf(e.key) > -1){
                     this.game.keys.splice(this.game.keys.indexOf(e.key), 1);
@@ -65,6 +80,7 @@ window.addEventListener('load', function(){
         OhNoGrito(){
             this.OhNOSound.currentTime = 0;
             this.OhNOSound.play();
+            
         }
        
     }
@@ -511,7 +527,6 @@ window.addEventListener('load', function(){
                     message1 = 'Rayos!';
                     message2 = 'Tienes que repararme para poder seguir jugando!';
                     this.game.sound.OhNoGrito();
-                
             
                 }
                 context.font = '70px ' + this.fontFamily;
