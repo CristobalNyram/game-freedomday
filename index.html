@@ -23,6 +23,18 @@
             timer: 1500
             }).then(resul=>location.reload());
         }
+        function regresar(){
+            Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Regresando al sistema',
+            showConfirmButton: false,
+            timer: 1500
+            }).then(res=>
+                window.location.href='http://216.250.118.27/Freedomday/public/login'
+            );
+           
+        }
     </script>
     <style>
         #button_action{
@@ -59,6 +71,13 @@
 
     </div>
 
+    <div  id=""  style="position:absolute; right:0;" onclick="regresar()">
+        <button type="button" class="btn btn-danger" id="" value="arriba" onclick="reinciar();">Regresar a la app</button>
+      
+
+
+
+    </div>
     <div  id="button_action" >
         <button type="button" class="btn btn-primary" id="arribaButton" value="arriba">arriba</button>
         <button type="button" class="btn btn-danger" id="disparoButton">disparar</button>
