@@ -13,9 +13,53 @@
 
 </head>
 <body>
+    <script>
+        function reinciar(){
+            Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Juego reinicado exitosamente',
+            showConfirmButton: false,
+            timer: 1500
+            }).then(resul=>location.reload());
+        }
+    </script>
+    <style>
+        #button_action{
+            position:absolute ; right: 42%; bottom: 10%;
+        }
+       @media only screen and (max-width: 600px) {
+
+        #button_action {
+            position:absolute ; right:30%; bottom: 10%;
+        }
+        }
+
+        @media only screen and (max-width: 500px) {
+
+        #button_action {
+            position:absolute ; right:23%; bottom: 10%;
+        }
+        }
+        
+        @media only screen and (max-width: 400px) {
+
+        #button_action {
+            position:absolute ; right:15%; bottom: 10%;
+        }
+        }
+    </style>
     
 
-    <center class="mt-1 ">
+    <div  id="button_cerrar" >
+        <button type="button" class="btn btn-warning" id="" value="arriba" onclick="reinciar();">reiniciar juego</button>
+      
+
+
+
+    </div>
+
+    <div  id="button_action" >
         <button type="button" class="btn btn-primary" id="arribaButton" value="arriba">arriba</button>
         <button type="button" class="btn btn-danger" id="disparoButton">disparar</button>
 
@@ -23,7 +67,7 @@
 
 
 
-    </center>
+    </div>
    
 
     <canvas id="canvas1"></canvas>
@@ -60,12 +104,18 @@
     <audio id="powerdown" src="assets/powerdown.wav"></audio>
     <audio id="explosion" src="assets/explosion.wav"></audio>
     <audio id="shot" src="assets/shot_v2.mp3"></audio>
-    <audio id="OhNo" src="assets/oh_no_sound.mp3"></audio>
+    <audio id="OhNo" src="assets/oh_no_sound.wav"></audio>
+    <audio id="OhYeaBaby" src="assets/oh_yeah.mp3"></audio>
+
 
     <audio id="hit" src="assets/hit.wav"></audio>
     <audio id="shieldSound" src="assets/aouch.mp3"></audio>
-
+    <script defer
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="script.js"></script>
+    
 </body>
 </html>
